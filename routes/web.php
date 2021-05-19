@@ -18,5 +18,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// ブログ一覧を表示
 Route::get('/', 'App\Http\Controllers\BlogController@showList')->name
 ('blogs');
+
+// ブログ詳細を表示
+Route::get('/blog/{id}', 'App\Http\Controllers\BlogController@showDetail')->name
+('show');
